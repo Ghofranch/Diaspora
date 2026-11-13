@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DIASPORA – Academic continuity for Tunisian families abroad</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF9F6;--card:#fff;--ink:#263449;--mut:#788397;--line:#E8EAF0;--navy:#172B4D;--deep:#10213B;--teal:#1E8A83;--soft:#E5F3F0;--sand:#EDE7DB;--gold:#D6A85F;--bad:#B4533C;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10213B;--card:#172B4D;--ink:#E8ECF3;--mut:#9AA6BA;--line:#2A4066;--navy:#E8ECF3;--soft:#183F4A;--sand:#243A5C;--teal:#4FC0B6}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:Manrope,Inter,sans-serif;color:var(--navy);line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800}h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800}h3{font-size:1.1rem;font-weight:700}
+a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+nav{display:flex;align-items:center;gap:18px;height:64px;flex-wrap:wrap}nav .sp{flex:1}
+.logo{font-weight:800;font-size:1.25rem;display:flex;align-items:center;gap:8px;text-decoration:none;margin:0}
+nav a.l{text-decoration:none;color:var(--mut);font-weight:500;font-size:.95rem}nav a.l:hover{color:var(--navy)}
+.btn{display:inline-block;border:1px solid var(--navy);background:var(--navy);color:#fff;padding:11px 20px;border-radius:12px;font:600 .95rem Inter;text-decoration:none;cursor:pointer}
+:root[data-x]{}@media(prefers-color-scheme:dark){.btn{color:#10213B}}
+.btn.g{background:transparent;color:var(--navy)}@media(prefers-color-scheme:dark){.btn.g{color:var(--ink)}}.btn.t{background:var(--teal);border-color:var(--teal);color:#fff}.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:72px 0}
+.hero p.s{font-size:1.2rem;color:var(--navy);font-weight:500}.hero p{max-width:52ch}
+.vis{position:relative;min-height:340px;background:var(--sand);border-radius:20px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:0 6px 18px rgba(16,33,59,.08);max-width:260px}
+.chip small{color:var(--mut);display:block}.chip b{font-family:Manrope;color:var(--navy)}
+.bar{height:6px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:var(--teal)}
+.vis .mid{align-self:center;border-left:2px dashed var(--gold);height:60px}
+section.b{padding:64px 0;border-top:1px solid var(--line)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.steps .card{border-top:3px solid var(--teal)}.mut{color:var(--mut)}
+.cta{background:var(--deep);color:#fff;border-radius:20px;padding:56px 32px;text-align:center;margin:40px 0}.cta h2{color:#fff}
+.cta .btn{background:var(--gold);border-color:var(--gold);color:#10213B}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mut);font-size:.9rem}footer .wrap{display:flex;gap:20px;flex-wrap:wrap}
+.demo{background:var(--soft);color:var(--ink);border-radius:12px;padding:10px 14px;font-size:.88rem;margin:16px 0}
+.app{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:28px 0 60px}
+.side a{display:block;padding:9px 12px;border-radius:10px;text-decoration:none;color:var(--mut);font-weight:500}.side a.on,.side a:hover{background:var(--soft);color:var(--navy)}
+.side .off{display:block;padding:9px 12px;color:var(--mut);opacity:.5;font-size:.9rem}
+.m{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}.m .card b{font:800 2rem Manrope;color:var(--navy);display:block}
+.av{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font:700 1rem Manrope;flex:none}
+.row{display:flex;gap:14px;align-items:center}.kids{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.tag{display:inline-block;font-size:.8rem;padding:2px 10px;border-radius:99px;background:var(--soft);color:var(--ink);margin:2px 4px 2px 0}.tag.w{background:var(--sand)}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
+.chk{display:flex;gap:8px;align-items:center;font-weight:400;margin:8px 0}.chk input{width:auto}
+.form{max-width:560px}.prog{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:12px 0 22px}.prog i{display:block;height:100%;background:var(--teal);transition:width .25s}
+.opt{display:block;width:100%;text-align:left;padding:14px 16px;margin:8px 0;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}.opt.on{border-color:var(--teal);background:var(--soft)}
+.err{color:var(--bad);font-size:.88rem;margin-top:6px}
+.top{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center}.ring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--teal) calc(var(--p)*1%),var(--line) 0)}.ring div{width:116px;height:116px;border-radius:50%;background:var(--card);display:grid;place-items:center;font:800 2rem Manrope;color:var(--navy)}
+@media(max-width:820px){.hero,.g3,.g4,.app,.top,.m{grid-template-columns:1fr}.hero{padding:40px 0}.side{display:flex;gap:6px;overflow-x:auto}.side .off{display:none}nav a.l.h{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home"><svg width="28" height="20" viewBox="0 0 28 20" aria-hidden="true"><circle cx="9" cy="10" r="8" fill="none" stroke="#1E8A83" stroke-width="2.2"/><circle cx="19" cy="10" r="8" fill="none" stroke="#D6A85F" stroke-width="2.2"/></svg>DIASPORA</a>
+<span class="sp"></span>
+<a class="l h" href="#home">Home</a><a class="l h" href="#how">How it works</a><a class="l h" href="#approach">Our approach</a><a class="l" href="#login">Log in</a><a class="btn" href="#start">Get started</a>
+</nav></div></header>
+<main id="v"></main>
+<footer><div class="wrap"><span>© DIASPORA — demo prototype</span><a href="#how">How it works</a><a href="#approach">Our approach</a><span>Privacy and terms: placeholders in this demo</span></div></footer>
+<script>
+const KEY='diaspora-demo2';let S={};
+try{S=Object.assign(S,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const $=s=>document.querySelector(s),V=$('#v'),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const Q=[
+{t:'Arithmetic',q:'What is 348 + 275?',a:'623'},
+{t:'Arithmetic',q:'What is 1000 − 467?',a:'533'},
+{t:'Fractions',q:'What is 3/4 + 1/8?',o:['4/12','5/8','7/8','1 1/4'],a:'7/8'},
+{t:'Fractions',q:'Which fraction is the greatest?',o:['3/5','2/3','5/8','7/12'],a:'2/3'},
+{t:'Operations',q:'Calculate 6 + 4 × 3.',a:'18'},
+{t:'Operations',q:'Calculate 2³ × 5.',a:'40'},
+{t:'Algebra',q:'Solve for x: x + 7 = 19.',a:'12'},
+{t:'Algebra',q:'Solve for x: 3x − 5 = 16.',a:'7'},
+{t:'Reasoning',q:'What number comes next? 2, 6, 18, 54, …',a:'162'},
+{t:'Word problems',q:'A notebook costs 2.5 dinars. Sara buys 4 and pays with 20 dinars. How many dinars does she get back?',a:'10'},
+{t:'Problem-solving',q:'Two numbers add up to 24 and differ by 6. What is the larger number?',a:'15'}];
+const CUR=['French national curriculum','German Lehrplan','Saudi national curriculum','Canadian provincial curriculum','UK national curriculum','International Baccalaureate','Other'];
+const OBJ=['Keep a link with Tunisian academic expectations','Strengthen mathematics','Strengthen sciences','Improve analytical reasoning','Prepare for a possible return to Tunisia'];
+const age=d=>{const t=new Date(d),n=new Date();let a=n.getFullYear()-t.getFullYear();if(n<new Date(n.getFullYear(),t.getMonth(),t.getDate()))a--;return isNaN(a)?'–':a};
+const ini=n=>n.split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
+const AS={sid:null,i:0,ans:{},done:false};
+function pub(body){V.innerHTML=body}
+function home(){pub(`<div class="wrap"><div class="hero"><div>
+<h1>Your child’s future has no borders.</h1><p class="s">Stay connected to Tunisian academic excellence, wherever life takes your family.</p>
+<p class="mut">Personalized academic assessments, qualified Tunisian teachers and learning plans designed to help your child grow with confidence.</p>
+<p><a class="btn t" href="#start">Start your child’s journey</a> &nbsp;<a class="btn g" href="#how">Discover how it works</a></p></div>
+<div class="vis" aria-label="A student in Lyon connected to a teacher in Tunis"><div class="chip"><small>Student · Lyon, France</small><b>Year 7 · French curriculum</b><div class="bar"><i style="width:72%"></i></div><small>Fractions: needs review</small></div><div class="mid" style="margin-left:50%"></div>
+<div class="chip" style="align-self:flex-end"><small>Teacher · Tunis, Tunisia</small><b>Mathematics, French</b><small>Reviews the diagnostic and shapes the plan</small></div></div></div></div>
+<section class="b"><div class="wrap"><h2>The challenge</h2><div class="g3">
+<div><h3>Curriculum differences</h3><p class="mut">Children follow different educational systems and assessment methods.</p></div>
+<div><h3>Academic continuity</h3><p class="mut">Parents may want extra support in mathematics, sciences and analytical reasoning.</p></div>
+<div><h3>Reintegration</h3><p class="mut">Families planning to return want their children to stay familiar with relevant Tunisian expectations.</p></div></div></div></section>
+<section class="b"><div class="wrap"><h2>How DIASPORA works</h2><div class="g4 steps">
+${[['Assess','Understand your child’s academic level.'],['Identify','Discover strengths and learning gaps.'],['Personalize','Create a learning pathway.'],['Progress','Learn with Tunisian teachers and monitor improvement.']].map((s,i)=>`<div class="card"><h3>${i+1}. ${s[0]}</h3><p class="mut" style="margin:0">${s[1]}</p></div>`).join('')}</div></div></section>
+<section class="b"><div class="wrap"><div class="cta"><h2>Give your child the confidence to succeed, wherever they study.</h2><a class="btn" href="#start">Get started</a></div></div></section>`)}
+function how(){pub(`<div class="wrap" style="padding:56px 20px;max-width:760px"><h1 style="font-size:2.4rem">${location.hash=='#approach'?'Our approach':'How it works'}</h1>
+<p class="mut">The aim is to understand each child’s needs, not to rank one education system against another.</p>
+${[['Register your child','Share the school system, grade and your learning goals.'],['Take the diagnostic','A short, one-question-at-a-time mathematics assessment.'],['See strengths and gaps','Results by topic, using supportive language. Topics not yet assessed are listed separately.'],['Teacher validation','A Tunisian teacher reviews every recommendation before it becomes an official plan.'],['Learn and follow progress','Sessions with your teacher, and a clear view of progress for you.']].map((s,i)=>`<div class="card" style="margin:14px 0"><h3>${i+1}. ${s[0]}</h3><p class="mut" style="margin:0">${s[1]}</p></div>`).join('')}
+<div class="demo">Curriculum references in this prototype are <b>illustrative</b> and need teacher validation. They are not an official Tunisian curriculum mapping.</div></div>`)}
+function start(){pub(`<div class="wrap"><div class="form" style="padding:48px 0"><h2>Create your parent profile</h2>
+<div class="demo">Demo mode: no real account is created and data stays in this browser only. The full version uses secure email and password sign-in.</div>
+<label for="pn">Full name</label><input id="pn" autocomplete="name"><label for="pc">Country of residence</label><input id="pc">
+<label class="chk"><input type="checkbox" id="pt"> I agree to the privacy policy and terms</label><div class="err" id="pe"></div>
+<p><button class="btn t" id="go">Continue to dashboard</button></p></div></div>`);
+$('#go').onclick=()=>{const n=$('#pn').value.trim(),c=$('#pc').value.trim();if(!n||!c||!$('#pt').checked){$('#pe').textContent='Enter your name, country and accept the terms to continue.';return}S.parent={name:n,country:c};save();location.hash='#dash'}}
+function shell(inner,on){if(!S.parent){location.hash='#start';return}
+pub(`<div class="wrap"><div class="app"><aside class="side"><a class="${on=='dash'?'on':''}" href="#dash">Overview</a><a class="${on=='kids'?'on':''}" href="#dash">My children</a><a class="${on=='as'?'on':''}" href="#assess">Assessments</a><span class="off">Learning plans, teachers, sessions: not in this demo</span><a href="#home" id="out">Log out</a></aside><div>${inner}</div></div></div>`);
+$('#out').onclick=()=>{S.parent=null;save()}}
+function dash(){const done=S.res.length;
+shell(`<h2>Welcome back, ${esc(S.parent?.name)}</h2><p class="mut">Here is your family’s learning overview.</p>
+<div class="m"><div class="card"><b>${S.kids.length}</b>Registered children</div><div class="card"><b>${done}</b>Completed assessments</div><div class="card"><b>${done}</b>Plans awaiting teacher review</div></div>
+<div class="row" style="justify-content:space-between"><h3 style="margin:0">My children</h3><a class="btn t" href="#add">Add child</a></div><br>
+${S.kids.length?`<div class="kids">${S.kids.map(k=>{const r=S.res.filter(x=>x.kid==k.id).pop();return`<div class="card"><div class="row"><div class="av">${esc(ini(k.name))}</div><div><b>${esc(k.name)}</b><div class="mut" style="font-size:.9rem">${age(k.dob)} yrs · ${esc(k.grade)} · ${esc(k.country)}</div></div></div><p class="mut" style="font-size:.9rem;margin:12px 0">${esc(k.cur)}</p><span class="tag">${r?'Assessment done: '+r.pct+'%':'Assessment not started'}</span><span class="tag w">No teacher assigned</span><p style="margin:12px 0 0"><a class="btn g" href="#assess/${k.id}">${r?'Retake':'Start'} math assessment</a></p></div>`}).join('')}</div>`:`<div class="card">No children yet. Add your first child to start the diagnostic.</div>`}`,'dash')}
+let F={step:0,d:{obj:[],sup:[]}};
+function add(){const st=F.step,d=F.d;
+const f=[`<label for="a1">Full name</label><input id="a1" value="${esc(d.name)}"><label for="a2">Date of birth</label><input type="date" id="a2" value="${esc(d.dob)}"><label for="a3">Country of residence</label><input id="a3" value="${esc(d.country||S.parent.country)}">`,
+`<label for="b1">Current grade</label><input id="b1" placeholder="e.g. Year 6, 5ème, Grade 7" value="${esc(d.grade)}"><label for="b2">Current curriculum</label><select id="b2">${CUR.map(c=>`<option ${d.cur==c?'selected':''}>${c}</option>`).join('')}</select><label for="b3">School language</label><input id="b3" value="${esc(d.lang)}">`,
+`<label>Learning objectives</label>${OBJ.map(o=>`<label class="chk"><input type="checkbox" data-o="${esc(o)}" ${d.obj.includes(o)?'checked':''}> ${o}</label>`).join('')}`,
+`<label>Subjects needing extra support</label>${['Mathematics','Sciences','French','Arabic','English'].map(o=>`<label class="chk"><input type="checkbox" data-s="${o}" ${d.sup.includes(o)?'checked':''}> ${o}</label>`).join('')}<label for="d1">Comments for the teacher</label><textarea id="d1" rows="3">${esc(d.note)}</textarea>`];
+shell(`<div class="form"><h2>Add a child</h2><div class="prog"><i style="width:${(st+1)*25}%"></i></div><p class="mut">Step ${st+1} of 4 · ${['Basic information','Education','Learning objectives','Support needs'][st]}</p>${f[st]}<div class="err" id="fe"></div><p>${st?'<button class="btn g" id="bk">Back</button> ':''}<button class="btn t" id="nx">${st==3?'Save child':'Next'}</button></p></div>`,'dash');
+const rd=()=>{if(st==0){d.name=$('#a1').value.trim();d.dob=$('#a2').value;d.country=$('#a3').value.trim()}if(st==1){d.grade=$('#b1').value.trim();d.cur=$('#b2').value;d.lang=$('#b3').value.trim()}if(st==2)d.obj=[...document.querySelectorAll('[data-o]:checked')].map(x=>x.dataset.o);if(st==3){d.sup=[...document.querySelectorAll('[data-s]:checked')].map(x=>x.dataset.s);d.note=$('#d1').value}};
+if($('#bk'))$('#bk').onclick=()=>{rd();F.step--;add()};
+$('#nx').onclick=()=>{rd();if(st==0&&(!d.name||!d.dob||!d.country))return $('#fe').textContent='Name, date of birth and country are required.';if(st==1&&(!d.grade||!d.lang))return $('#fe').textContent='Grade and school language are required.';
+if(st<3){F.step++;add();return}S.kids.push({...d,id:'k'+Date.now(),pid:S.parent.id});save();F={step:0,d:{obj:[],sup:[]}};location.hash='#dash'}}
+function assess(id){const kid=mine().find(k=>k.id==id);
+if(!kid){shell(`<h2>Assessments</h2>${mine().length?mine().map(k=>`<p><a class="btn g" href="#assess/${k.id}">Mathematics diagnostic for ${esc(k.name)}</a></p>`).join(''):'<div class="card">Add a child first to start an assessment.</div>'}`,'as');return}
+if(AS.sid!=id){AS.sid=id;AS.i=0;AS.ans={}}
+const q=Q[AS.i],last=AS.i==Q.length-1;
+shell(`<div class="form"><p class="mut">Mathematics diagnostic · ${esc(kid.name)} · ${esc(kid.grade)}</p><div class="prog"><i style="width:${(AS.i+1)/Q.length*100}%"></i></div><p class="mut">Question ${AS.i+1} of ${Q.length}</p><h3 style="font-size:1.3rem">${esc(q.q)}</h3>
+${q.o?q.o.map(o=>`<button class="opt ${AS.ans[AS.i]==o?'on':''}" data-v="${esc(o)}">${esc(o)}</button>`).join(''):`<input id="na" inputmode="decimal" placeholder="Type your answer" value="${esc(AS.ans[AS.i]||'')}">`}
+<p><button class="btn g" id="pv" ${AS.i?'':'disabled'}>Previous</button> <button class="btn t" id="nx">${last?'Submit answers':'Next'}</button></p><div class="err" id="ae"></div><p class="mut" style="font-size:.85rem">Answers are saved as you go. Skipped questions count as not answered.</p></div>`,'as');
+document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{AS.ans[AS.i]=b.dataset.v;assess(id)});
+if($('#na'))$('#na').oninput=e=>AS.ans[AS.i]=e.target.value.trim();
+$('#pv').onclick=()=>{AS.i--;assess(id)};
+$('#nx').onclick=()=>{if(!last){AS.i++;assess(id);return}if(!confirm('Submit the assessment? You cannot change answers afterwards.'))return;$('#nx').disabled=true;submit(kid)}}
+function submit(kid){const T={},rows=Q.map((q,i)=>{const g=String(AS.ans[i]??'').replace(',','.');const ok=g!==''&&(q.o?g==q.a:parseFloat(g)==parseFloat(q.a));T[q.t]=T[q.t]||{c:0,n:0};T[q.t].n++;if(ok)T[q.t].c++;return ok});
+const c=rows.filter(Boolean).length;S.res.push({kid:kid.id,date:new Date().toISOString().slice(0,10),c,n:Q.length,pct:Math.round(c/Q.length*100),T});save();AS.sid=null;location.hash='#results/'+kid.id}
+function results(id){const kid=mine().find(k=>k.id==id),r=S.res.filter(x=>x.kid==id).pop();if(!kid||!r){location.hash='#dash';return}
+const tp=Object.entries(r.T),st=tp.filter(([,v])=>v.c==v.n).map(([k])=>k),rv=tp.filter(([,v])=>v.c<v.n).map(([k])=>k);
+shell(`<h2>Results for ${esc(kid.name)}</h2><div class="demo"><b>Demo diagnostic — rule-based analysis.</b> Not generated by AI. A teacher must review it before it becomes a learning plan.</div>
+<div class="card top"><div class="ring" style="--p:${r.pct}"><div>${r.pct}%</div></div><div><h3>${r.c} of ${r.n} questions answered correctly</h3><p class="mut" style="margin:0">${r.n-r.c} questions to revisit. This snapshot shows where to focus first, not a full picture of ${esc(kid.name)}’s ability.</p></div></div><br>
+<div class="card"><h3>Performance by topic</h3>${tp.map(([k,v])=>`<div style="margin:12px 0"><div class="row" style="justify-content:space-between"><span>${k}</span><span class="mut">${v.c}/${v.n}</span></div><div class="bar"><i style="width:${v.c/v.n*100}%"></i></div></div>`).join('')}</div><br>
+<div class="g3" style="gap:16px"><div class="card"><h3>Strengths shown</h3>${st.map(x=>`<span class="tag">${x}</span>`).join('')||'<span class="mut">Not enough evidence yet.</span>'}</div>
+<div class="card"><h3>Worth practicing</h3>${rv.map(x=>`<span class="tag w">${x}</span>`).join('')||'<span class="mut">None in this set.</span>'}</div>
+<div class="card"><h3>Not yet assessed</h3><span class="tag w">Geometry</span><span class="tag w">Measurement</span><span class="tag w">Statistics</span></div></div><br>
+<div class="card"><h3>Suggested next steps</h3><ul>${rv.map(x=>`<li>Short weekly practice on <b>${x}</b>, to confirm with a teacher.</li>`).join('')}<li>Possible differences with Tunisian expectations in untested topics need verification by a teacher against validated curriculum references.</li></ul><p class="mut" style="font-size:.88rem;margin:0">Curriculum mapping here is illustrative only.</p></div><p><a class="btn g" href="#dash">Back to overview</a></p>`,'as')}
+function route(){const h=location.hash.slice(1)||'home',[p,id]=h.split('/');scrollTo(0,0);
+({home,how,approach:how,login,start,dash,add:()=>S.session?.role=='parent'?add():login(),assess:()=>assess(id),results:()=>results(id)}[p]||home)()}
+/* ===== ROLES LAYER (demo): parent / student / teacher / admin ===== */
+document.head.insertAdjacentHTML('beforeend','<style>.tag.ip{background:transparent;border:1px solid var(--teal)}.tag.dn{background:var(--teal);color:#fff}.line{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line);flex-wrap:wrap}.btn.s{padding:6px 12px;font-size:.85rem}</style>');
+const iso=n=>new Date(Date.now()+n*864e5).toISOString().slice(0,10);
+function seed(){return{v:2,session:null,parent:null,parents:[{id:'p1',name:'Amel Trabelsi',country:'France'}],
+kids:[{id:'k1',pid:'p1',name:'Yassine Trabelsi',dob:'2014-03-02',country:'France',grade:'Year 7',cur:'French national curriculum',lang:'French',obj:['Strengthen mathematics'],sup:['Mathematics'],teacher:'t1',consent:true,user:'yassine.demo'},
+{id:'k2',pid:'p1',name:'Lina Trabelsi',dob:'2017-06-11',country:'France',grade:'Year 4',cur:'French national curriculum',lang:'French',obj:[],sup:[],teacher:null,consent:false,user:null}],
+teachers:[{id:'t1',name:'Karim Ben Salah',subjects:['Mathematics'],grades:'Primary, Middle',quals:'MSc Mathematics Education (fictional)',exp:8,avail:'Tue, Thu 17:00–20:00 Tunis time',score:100,status:'approved'},
+{id:'t2',name:'Sonia Mejri',subjects:['Sciences','French'],grades:'Middle',quals:'BSc Biology, teaching diploma (fictional)',exp:4,avail:'Mon, Wed evenings',score:75,status:'pending'}],
+res:[{kid:'k1',date:iso(-6),c:7,n:11,pct:64,T:{Arithmetic:{c:2,n:2},Fractions:{c:1,n:2},Operations:{c:2,n:2},Algebra:{c:1,n:2},Reasoning:{c:1,n:1},'Word problems':{c:0,n:1},'Problem-solving':{c:0,n:1}}}],
+plans:[{id:'pl1',kid:'k1',tid:'t1',status:'pending',note:'',obj:['Fractions','Algebra','Word problems'],acts:[{d:'Mon',t:'Fraction addition practice, 15 min',s:'planned'},{d:'Wed',t:'Two-step equations',s:'planned'},{d:'Fri',t:'Word problems: read, model, solve',s:'planned'}]}],
+sess:[{id:'s1',kid:'k1',tid:'t1',when:iso(2)+' 17:00',st:'pending',note:''}],reqs:[]}}
+if(S.v!=2)S=seed();if(S.session?.role=='parent')S.parent=S.parents.find(p=>p.id==S.session.id);
+const T_=i=>S.teachers.find(t=>t.id==i),K_=i=>S.kids.find(k=>k.id==i),tn=i=>i?T_(i)?.name:'Not assigned',lastR=i=>S.res.filter(r=>r.kid==i).pop();
+const mine=()=>{const s=S.session||{};return S.kids.filter(k=>s.role=='parent'?k.pid==s.id:s.role=='student'?k.id==s.id:s.role=='teacher'?k.teacher==s.id:s.role=='admin')};
+const topics=(r,w)=>Object.entries(r.T).filter(([,v])=>w?v.c<v.n:v.c==v.n).map(([k])=>k);
+const tags=(a,c)=>a.map(x=>`<span class="tag ${c||''}">${esc(x)}</span>`).join('')||'<span class="mut">–</span>';
+const ACT={Fractions:'Fraction practice, 15 min','Word problems':'Word problems: read, model, solve',Algebra:'Two-step equations','Problem-solving':'Logic puzzles, 15 min',Arithmetic:'Mental arithmetic drills',Operations:'Order of operations set',Reasoning:'Number patterns'};
+const A={in(r,i){S.session={role:r,id:i};if(r=='parent')S.parent=S.parents.find(p=>p.id==i);location.hash='#dash'},out(){S.session=null;S.parent=null},
+inv(k){if(!confirm('I confirm I am this child’s parent or guardian and I consent to them having their own DIASPORA account.'))return;const c=K_(k);c.consent=true;c.invite='DIA-'+Math.random().toString(36).slice(2,6).toUpperCase()},
+req(k,t){S.reqs.push({id:'r'+Date.now(),kid:k,tid:t,st:'pending'})},acc(i){const r=S.reqs.find(x=>x.id==i);r.st='accepted';K_(r.kid).teacher=r.tid},dec(i){S.reqs.find(x=>x.id==i).st='declined'},
+bk(k,w){S.sess.push({id:'s'+Date.now(),kid:k,tid:K_(k).teacher,when:w,st:'pending',note:''})},
+ss(i,st){const s=S.sess.find(x=>x.id==i);s.st=st;if(st=='completed')s.note=prompt('Session notes for the family')||''},
+plan(k){const w=topics(lastR(k),1),d=['Mon','Wed','Fri','Sat'];S.plans.push({id:'pl'+Date.now(),kid:k,tid:S.session.id,status:'pending',note:'',obj:w,acts:w.slice(0,4).map((x,i)=>({d:d[i],t:ACT[x]||x,s:'planned'}))})},
+apr(i){const p=S.plans.find(x=>x.id==i);p.status='active';p.note=prompt('Comment for the family (optional)')||''},
+step(i,j){const a=S.plans.find(p=>p.id==i).acts[j];a.s={planned:'in progress','in progress':'completed',completed:'planned'}[a.s]},tst(i,st){T_(i).status=st}};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;A[b.dataset.a](b.dataset.x,b.dataset.y);save();route()});
+function shell(inner,on){const s=S.session;if(!s){location.hash='#login';return}
+const L={parent:[['dash','Overview'],['assess','Assessments']],student:[['dash','My space'],['assess','Math check-up']],teacher:[['dash','My students']],admin:[['dash','Administration']]}[s.role],o=on=='as'?'assess':'dash';
+pub(`<div class="wrap"><div class="app"><aside class="side"><span class="mut" style="padding:0 12px;font-size:.85rem">${s.role} view</span>${L.map(l=>`<a class="${o==l[0]?'on':''}" href="#${l[0]}">${l[1]}</a>`).join('')}<a href="#home" data-a="out">Log out</a></aside><div><div class="demo">Demo: sign-in and access rules are simulated in app code. Real Supabase Auth and Row Level Security are not connected.</div>${inner}</div></div></div>`)}
+function login(){pub(`<div class="wrap"><div class="form" style="padding:48px 0"><h2>Log in</h2><div class="demo"><b>Simulated sign-in</b> with fictional accounts. Real email and password authentication is not connected.</div>${[['parent','p1','Amel Trabelsi','Parent'],['student','k1','Yassine','Student, with parental consent'],['teacher','t1','Karim Ben Salah','Teacher, approved'],['teacher','t2','Sonia Mejri','Teacher, application pending'],['admin','a1','Platform admin','Administrator']].map(a=>`<p><button class="btn g" style="width:100%;text-align:left" data-a="in" data-x="${a[0]}" data-y="${a[1]}">${a[3]} · ${a[2]}</button></p>`).join('')}<p class="mut">New here? <a href="#start">Create an account</a></p></div></div>`)}
+const QT=[['A student writes 1/2 + 1/3 = 2/5. What is the likely misconception?',['Adds numerators and denominators separately','Forgot to simplify','Used the wrong sign'],0],['Solve 2x + 3 = 11.',['x = 7','x = 4','x = 5'],1],['What is 15% of 80?',['10','12','15'],1],['A student gives a wrong answer. Best first response?',['Give the correct answer','Ask them to explain their reasoning','Move on'],1]];
+function start(){const w=location.hash.split('/')[1],fm=(h,b)=>pub(`<div class="wrap"><div class="form" style="padding:48px 0"><h2>${h}</h2><div class="demo">Demo mode: nothing is sent anywhere. Data stays in this browser.</div>${b}<div class="err" id="se"></div><p><button class="btn t" id="go">Continue</button></p></div></div>`),v=id=>$('#'+id).value.trim(),er=m=>$('#se').textContent=m;
+if(!w)return pub(`<div class="wrap"><div class="form" style="padding:48px 0"><h2>Create your account</h2><p class="mut">Choose how you will use DIASPORA.</p>${[['parent','Parent','Register your family and add children.'],['student','Student','Under 18? You need an invitation code from your parent.'],['teacher','Teacher','Apply to teach. An administrator reviews every application.']].map(a=>`<a class="card" style="display:block;margin:12px 0;text-decoration:none" href="#start/${a[0]}"><h3 style="margin:0">${a[1]}</h3><span class="mut">${a[2]}</span></a>`).join('')}<p class="mut">Already registered? <a href="#login">Log in</a></p></div></div>`);
+if(w=='parent'){fm('Create your parent account',`<label for="pn">Full name</label><input id="pn"><label for="pc">Country of residence</label><input id="pc"><label class="chk"><input type="checkbox" id="pt"> I agree to the privacy policy and terms</label>`);$('#go').onclick=()=>{if(!v('pn')||!v('pc')||!$('#pt').checked)return er('Enter your name, country and accept the terms.');const p={id:'p'+Date.now(),name:v('pn'),country:v('pc')};S.parents.push(p);A.in('parent',p.id);save()}}
+else if(w=='student'){fm('Activate your student account',`<p class="mut">Ask your parent to generate an invitation code in their dashboard.</p><label for="sc">Invitation code</label><input id="sc" placeholder="DIA-XXXX"><label for="su">Choose a username</label><input id="su">`);$('#go').onclick=()=>{const k=S.kids.find(x=>x.invite&&x.invite==v('sc').toUpperCase()&&!x.user);if(!k||!v('su'))return er('Enter a valid unused invitation code and a username.');k.user=v('su');A.in('student',k.id);save()}}
+else{fm('Teacher application',`<label for="tn">Full name</label><input id="tn"><label for="tq">Qualifications</label><textarea id="tq" rows="2"></textarea><label for="te">Years of teaching experience</label><input id="te" type="number" min="0"><label>Subjects</label>${['Mathematics','Sciences','French','Arabic','English'].map(s=>`<label class="chk"><input type="checkbox" data-s="${s}"> ${s}</label>`).join('')}<label for="tg">Grade levels</label><input id="tg" placeholder="Primary, Middle"><label for="ta">Availability (include time zone)</label><input id="ta"><h3 style="margin-top:24px">Subject knowledge check</h3><p class="mut">Illustrative items, not a validated test.</p>${QT.map((q,i)=>`<label>${q[0]}</label>${q[1].map((o,j)=>`<label class="chk"><input type="radio" name="q${i}" value="${j}"> ${o}</label>`).join('')}`).join('')}<label for="tc">Teaching evaluation: a student keeps making the same error in fractions. How would you respond?</label><textarea id="tc" rows="3"></textarea><p class="mut" style="font-size:.85rem">Reviewed by an administrator. Not scored automatically.</p>`);
+$('#go').onclick=()=>{const sb=[...document.querySelectorAll('[data-s]:checked')].map(x=>x.dataset.s);if(!v('tn')||!v('tq')||!sb.length||!v('tg')||!v('ta')||!v('tc'))return er('Complete every field and choose at least one subject.');let c=0;QT.forEach((q,i)=>{if(document.querySelector(`[name=q${i}]:checked`)?.value==q[2])c++});const t={id:'t'+Date.now(),name:v('tn'),quals:v('tq'),exp:v('te')||0,subjects:sb,grades:v('tg'),avail:v('ta'),score:c/QT.length*100,comp:v('tc'),status:'pending'};S.teachers.push(t);A.in('teacher',t.id);save()}}}
+const acts=(p,ed)=>p.acts.map((a,j)=>`<div class="line"><span><b>${a.d}</b> ${esc(a.t)}</span>${ed?`<button class="btn g s" data-a="step" data-x="${p.id}" data-y="${j}">${a.s}</button>`:`<span class="tag ${a.s=='completed'?'dn':a.s=='planned'?'w':'ip'}">${a.s}</span>`}</div>`).join('');
+function dash(){({parent:pdash,student:sdash,teacher:tdash,admin:adash}[S.session?.role]||login)()}
+function kcard(k){const r=lastR(k.id),p=S.plans.find(x=>x.kid==k.id),ap=S.teachers.filter(t=>t.status=='approved'),rq=S.reqs.find(x=>x.kid==k.id&&x.st=='pending');
+return`<div class="card"><div class="row"><div class="av">${esc(ini(k.name))}</div><div><b>${esc(k.name)}</b><div class="mut" style="font-size:.9rem">${age(k.dob)} yrs · ${esc(k.grade)} · ${esc(k.country)}</div></div></div>
+<p style="margin:12px 0"><span class="tag">${r?'Math '+r.pct+'%':'No assessment yet'}</span><span class="tag w">Teacher: ${esc(tn(k.teacher))}</span><span class="tag">Plan: ${p?p.status=='active'?'active':'awaiting teacher review':'none yet'}</span></p>
+${p?tags(p.obj,'w')+(p.status=='active'?acts(p)+`<p class="mut" style="font-size:.9rem">Teacher comment: ${esc(p.note)||'–'}</p>`:''):''}
+<p style="font-size:.9rem">Student account: ${k.user?'active ('+esc(k.user)+')':k.invite?'code <b>'+k.invite+'</b>, share it with your child':`<button class="btn g s" data-a="inv" data-x="${k.id}">Invite with consent</button>`}</p>
+${k.teacher?`<button class="btn g s" data-a="bk" data-x="${k.id}" data-y="${iso(3)} 17:00">Request session ${iso(3)} 17:00</button>`:rq?'<span class="mut">Teacher request pending</span>':ap.map(t=>`<button class="btn g s" data-a="req" data-x="${k.id}" data-y="${t.id}">Request ${esc(t.name)}</button>`).join(' ')}
+${S.sess.filter(s=>s.kid==k.id).map(s=>`<p class="mut" style="font-size:.9rem;margin:8px 0 0">Session ${s.when}: ${s.st}${s.note?' — '+esc(s.note):''}</p>`).join('')}
+<p style="margin:12px 0 0"><a class="btn g s" href="#assess/${k.id}">Math assessment</a>${r?` <a class="btn g s" href="#results/${k.id}">Results</a>`:''}</p></div>`}
+function pdash(){const ks=mine(),ids=x=>ks.some(k=>k.id==x.kid);shell(`<h2>Welcome back, ${esc(S.parent.name)}</h2><p class="mut">Here is your family’s learning overview.</p><div class="m"><div class="card"><b>${ks.length}</b>Children</div><div class="card"><b>${S.plans.filter(p=>ids(p)&&p.status=='active').length}</b>Active plans</div><div class="card"><b>${S.sess.filter(s=>ids(s)&&['pending','confirmed'].includes(s.st)).length}</b>Upcoming sessions</div></div><div class="row" style="justify-content:space-between"><h3 style="margin:0">My children</h3><a class="btn t" href="#add">Add child</a></div><br><div class="kids">${ks.map(kcard).join('')||'<div class="card">No children yet.</div>'}</div>`,'dash')}
+function sdash(){const k=mine()[0],r=lastR(k.id),p=S.plans.find(x=>x.kid==k.id&&x.status=='active'),s=S.sess.find(x=>x.kid==k.id&&x.st=='confirmed');
+shell(`<h2>Hi ${esc(k.name.split(' ')[0])}!</h2><p class="mut">Small steps add up. Here is your space.</p><div class="card"><h3>Math check-up</h3><p class="mut">${r?'Last done '+r.date+'. You can try again any time.':'Answer a few questions so your teacher knows where to start.'}</p><a class="btn t" href="#assess/${k.id}">${r?'Try again':'Start check-up'}</a>${r?` <a class="btn g" href="#results/${k.id}">See my results</a>`:''}</div><br>
+<div class="g3" style="gap:16px"><div class="card"><h3>You’re doing well at</h3>${r?tags(topics(r)):'<span class="mut">Take the check-up to find out.</span>'}</div><div class="card"><h3>Let’s practice</h3>${r?tags(topics(r,1),'w'):'<span class="mut">–</span>'}</div><div class="card"><h3>Your teacher</h3>${esc(tn(k.teacher))}<p class="mut" style="margin:6px 0 0">${s?'Next session: '+s.when:'No confirmed session yet. Ask your parent to book one.'}</p></div></div><br><div class="card"><h3>This week</h3>${p?acts(p):'<p class="mut" style="margin:0">Your teacher is preparing your plan.</p>'}</div>`,'dash')}
+function tdash(){const t=T_(S.session.id);if(t.status!='approved')return shell(`<h2>Welcome, ${esc(t.name)}</h2><div class="card"><h3>Application: ${t.status}</h3><p class="mut">Knowledge check ${t.score}%. An administrator reviews your qualifications and results before your profile is visible to parents. You have no access to students until approved.</p></div>`,'dash');
+const ks=mine(),rq=S.reqs.filter(r=>r.tid==t.id&&r.st=='pending');
+shell(`<h2>Welcome, ${esc(t.name)}</h2><div class="m"><div class="card"><b>${ks.length}</b>Assigned students</div><div class="card"><b>${rq.length}</b>New requests</div><div class="card"><b>${S.plans.filter(p=>p.tid==t.id&&p.status=='pending').length}</b>Plans to review</div></div>
+${rq.length?`<div class="card"><h3>Assignment requests</h3>${rq.map(r=>`<div class="line"><span>${esc(K_(r.kid).name)}, ${esc(K_(r.kid).grade)}</span><span><button class="btn t s" data-a="acc" data-x="${r.id}">Accept</button> <button class="btn g s" data-a="dec" data-x="${r.id}">Decline</button></span></div>`).join('')}</div><br>`:''}
+${ks.map(k=>{const r=lastR(k.id),p=S.plans.find(x=>x.kid==k.id);return`<div class="card" style="margin-bottom:16px"><h3>${esc(k.name)} <span class="mut" style="font-weight:400">· ${esc(k.grade)} · ${esc(k.cur)}</span></h3>
+${r?`<p>Latest math diagnostic ${r.pct}% (${r.date}). Evidenced strengths: ${tags(topics(r))}<br>To review: ${tags(topics(r,1),'w')}</p>`:'<p class="mut">No assessment yet.</p>'}
+${p?`<h3>Learning plan <span class="tag">${p.status}</span></h3><p class="mut" style="font-size:.88rem">Draft from rule-based analysis (simulated, not AI). Your review makes it official.</p>${acts(p,1)}${p.status=='pending'?`<p><button class="btn t" data-a="apr" data-x="${p.id}">Approve and activate</button></p>`:''}`:r?`<button class="btn g" data-a="plan" data-x="${k.id}">Draft plan from assessment</button>`:''}
+<h3 style="margin-top:16px">Sessions</h3>${S.sess.filter(s=>s.kid==k.id).map(s=>`<div class="line"><span>${s.when} <span class="tag">${s.st}</span> ${esc(s.note)}</span><span>${s.st=='pending'?`<button class="btn t s" data-a="ss" data-x="${s.id}" data-y="confirmed">Confirm</button> <button class="btn g s" data-a="ss" data-x="${s.id}" data-y="rejected">Reject</button>`:s.st=='confirmed'?`<button class="btn g s" data-a="ss" data-x="${s.id}" data-y="completed">Mark completed</button>`:''}</span></div>`).join('')||'<span class="mut">None</span>'}</div>`}).join('')||'<div class="card">No students assigned yet.</div>'}`,'dash')}
+function adash(){shell(`<h2>Administration</h2><div class="m"><div class="card"><b>${S.parents.length}</b>Parents</div><div class="card"><b>${S.kids.filter(k=>k.user).length}/${S.kids.length}</b>Students active / registered</div><div class="card"><b>${S.res.length}</b>Assessments completed</div></div>
+<div class="card"><h3>Teacher applications</h3>${S.teachers.map(t=>`<div class="line"><span><b>${esc(t.name)}</b> <span class="tag ${t.status=='approved'?'dn':'w'}">${t.status}</span><br><span class="mut" style="font-size:.88rem">${esc(t.quals)} · ${t.exp} yrs · ${esc(t.subjects.join(', '))} · ${esc(t.grades)}<br>Knowledge check ${t.score}% · ${esc(t.avail)}${t.comp?'<br>Teaching answer: '+esc(t.comp):''}</span></span><span>${t.status!='approved'?`<button class="btn t s" data-a="tst" data-x="${t.id}" data-y="approved">Approve</button> `:''}${t.status!='rejected'?`<button class="btn g s" data-a="tst" data-x="${t.id}" data-y="rejected">Reject</button>`:''}</span></div>`).join('')}</div><br>
+<div class="card"><h3>Platform activity</h3>${S.sess.map(s=>`<div class="line"><span>${esc(K_(s.kid).name)} with ${esc(tn(s.tid))}, ${s.when}</span><span class="tag">${s.st}</span></div>`).join('')||'<span class="mut">No sessions.</span>'}<p class="mut" style="font-size:.88rem;margin-bottom:0">Only approved teachers appear to parents. Admin provisioning is simulated here; in production it must be server-side only.</p></div>`,'dash')}
+addEventListener('hashchange',route);route();
+
+</script></body></html>
